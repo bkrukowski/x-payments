@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$"
+    },
+    "currency": {
+      "type": "string",
+      "enum": ["AED", "USD"]
+    },
+    "amount_fractions": {
+      "type": "integer",
+      "minimum": 100
+    }
+  },
+  "required": [
+    "id",
+    "currency",
+    "amount_fractions"
+  ]
+}
